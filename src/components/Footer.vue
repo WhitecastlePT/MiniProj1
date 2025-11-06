@@ -145,4 +145,75 @@ const socialLinks = [
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
 }
+
+/* Media Queries - Tablet */
+@media screen and (max-width: 1024px) {
+  .rodape {
+    padding: 1.5rem 0;
+  }
+
+  .conteudoRodape {
+    gap: 1.5rem;
+  }
+
+  .tituloRedes {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .linksRedes {
+    gap: 1.25rem;
+  }
+
+  .icone {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Media Queries - Mobile */
+@media screen and (max-width: 768px) {
+  .rodape {
+    padding: 1rem 0;
+  }
+
+  .contentor {
+    padding: 0 10px;
+  }
+
+  .conteudoRodape {
+    gap: 1rem;
+  }
+
+  .tituloRedes {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .linksRedes {
+    gap: 1rem;
+  }
+
+  .icone {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nomeRede {
+    font-size: 0.8rem;
+  }
+
+  .infoRodape {
+    padding-top: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .feito-com {
+    font-size: 0.8rem;
+  }
+}
 </style>

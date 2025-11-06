@@ -59,7 +59,7 @@
 .conteudo {
   display: flex;
   flex-direction: column;
-  gap: 15rem;
+  gap: 13rem;
 }
 
 /* biografia */
@@ -78,7 +78,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin-top: 1rem;
+
 }
 
 .item-dado {
@@ -97,5 +97,67 @@
 .item-dado span {
   color: #e2e8f0;
   font-size: 1rem;
+}
+
+/* Media Queries - Tablet */
+@media screen and (max-width: 1024px) {
+  .caixaSeccao {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .tituloSeccao {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .conteudo {
+    gap: 8rem;
+  }
+
+  .grelhaInfo {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* Media Queries - Mobile */
+@media screen and (max-width: 768px) {
+  .caixaSeccao {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .tituloSeccao {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom-width: 2px;
+  }
+
+  .conteudo {
+    gap: 3rem;
+  }
+
+  .texto-bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .grelhaInfo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .item-dado {
+    padding: 0.75rem;
+  }
+
+  .item-dado strong {
+    font-size: 0.85rem;
+  }
+
+  .item-dado span {
+    font-size: 0.9rem;
+  }
 }
 </style>

@@ -29,7 +29,7 @@ const setSection = (section) => {
                 :class="{ activo: currentSection === 'quem-sou' }"
                 class="btn-nav"
               >
-                Quem Sou Eu?
+                Quem sou eu?
               </button>
               <button
                 @click="setSection('o-que-faco')"
@@ -84,7 +84,8 @@ body {
 }
 
 .contentor {
-  min-width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -155,5 +156,96 @@ body {
   flex: 1;
   position: relative;
   z-index: 1;
+}
+
+/* Media Queries - Tablet */
+@media screen and (max-width: 1024px) {
+  .contentor {
+    padding: 0 15px;
+  }
+
+  .cabecalho {
+    padding: 1.5rem 0;
+  }
+
+  .conteudoCabecalho {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .fotoPerfil {
+    margin-left: 0;
+  }
+
+  .fotoPerfil img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .area-direita {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .navegacao {
+    gap: 0.75rem;
+  }
+
+  .btn-nav {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Media Queries - Mobile */
+@media screen and (max-width: 768px) {
+  .contentor {
+    padding: 0 10px;
+  }
+
+  .cabecalho {
+    padding: 1rem 0;
+  }
+
+  .conteudoCabecalho {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fotoPerfil {
+    margin-left: 0;
+  }
+
+  .fotoPerfil img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .area-direita {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .navegacao {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .btn-nav {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 </style>

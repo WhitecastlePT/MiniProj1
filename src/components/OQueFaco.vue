@@ -67,7 +67,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin-top: 1rem;
 }
 
 .item-dado {
@@ -86,5 +85,49 @@
 .item-dado span {
   color: #e2e8f0;
   font-size: 1rem;
+}
+
+/* Media Queries - Tablet */
+@media screen and (max-width: 1024px) {
+  .caixaSeccao {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .tituloSeccao {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .conteudo {
+    gap: 1.5rem;
+  }
+}
+
+/* Media Queries - Mobile */
+@media screen and (max-width: 768px) {
+  .caixaSeccao {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .tituloSeccao {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom-width: 2px;
+  }
+
+  .conteudo {
+    gap: 1rem;
+  }
+
+  .texto-bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .texto-bio p {
+    margin-bottom: 0.75rem;
+  }
 }
 </style>
