@@ -1,4 +1,4 @@
-# Miniprojeto
+# MiniProj1
 Atividade 2 - Mestrado PWA
 
 Prototipo criado no Figma
