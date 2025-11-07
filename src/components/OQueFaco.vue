@@ -33,7 +33,7 @@
   background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
   padding: 2rem;
   box-shadow: 0 4px 0px rgba(0, 0, 0, 0.3);
-  min-height: 775px;
+  min-height: 784px;
 }
 
 .tituloSeccao {
