@@ -1,16 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import QuemSou from './components/QuemSou.vue'
-import OQueFaco from './components/OQueFaco.vue'
-import Hobbies from './components/Hobbies.vue'
 import Footer from './components/Footer.vue'
 import profileImage from './assets/images/me44.png'
-
-const currentSection = ref('quem-sou')
-
-const setSection = (section) => {
-  currentSection.value = section
-}
 </script>
 
 <template>
@@ -24,27 +14,15 @@ const setSection = (section) => {
           <div class="area-direita">
             <h1 class="titulo">CV - Henrique Crachat</h1>
             <nav class="navegacao">
-              <button
-                @click="setSection('quem-sou')"
-                :class="{ activo: currentSection === 'quem-sou' }"
-                class="btn-nav"
-              >
+              <router-link to="/quem-sou" class="btn-nav" active-class="activo">
                 Quem sou eu?
-              </button>
-              <button
-                @click="setSection('o-que-faco')"
-                :class="{ activo: currentSection === 'o-que-faco' }"
-                class="btn-nav"
-              >
+              </router-link>
+              <router-link to="/o-que-faco" class="btn-nav" active-class="activo">
                 O que faço?
-              </button>
-              <button
-                @click="setSection('hobbies')"
-                :class="{ activo: currentSection === 'hobbies' }"
-                class="btn-nav"
-              >
+              </router-link>
+              <router-link to="/hobbies" class="btn-nav" active-class="activo">
                 Hobbies
-              </button>
+              </router-link>
             </nav>
           </div>
         </div>
@@ -53,9 +31,7 @@ const setSection = (section) => {
 
     <main class="conteudo-principal">
       <div class="contentor">
-        <QuemSou v-if="currentSection === 'quem-sou'" key="quem-sou" />
-        <OQueFaco v-else-if="currentSection === 'o-que-faco'" key="o-que-faco" />
-        <Hobbies v-else-if="currentSection === 'hobbies'" key="hobbies" />
+        <router-view />
       </div>
     </main>
 
@@ -144,6 +120,13 @@ body {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn-nav:hover {
+  background: #5568d3;
 }
 
 .btn-nav.activo {
@@ -203,6 +186,10 @@ body {
 
 /* Media Queries - Mobile */
 @media screen and (max-width: 768px) {
+  #app {
+    padding: 0 !important;
+  }
+
   .contentor {
     padding: 0 10px;
   }
